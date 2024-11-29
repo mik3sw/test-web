@@ -1,0 +1,213 @@
+:root{
+    /* Main site colors */
+    --background-color: rgb(0, 0, 0);
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(255, 255, 255);
+    --text-color: rgb(255, 255, 255);
+    --button-text-color: rgb(0, 0, 0);
+
+
+    /* Animated blurred blob colors */
+    --gradient-speed: 0.000006;
+    --gradient-color-1: #a3007a; 
+    --gradient-color-2: #b803ff; 
+    --gradient-color-3: #6629ff;  
+    --gradient-color-4: #000000;
+    --gradient-speed: 0.000006; 
+
+    /* Blur value (the greater, the more blurred) */
+    --blur: 100px;
+
+    /* Border radius for the card */
+    --border-radius-1: 15px;
+
+    /* Border radius for the buttons */
+    --border-radius-2: 30px;
+
+    /* Text sizes */
+    --title-size: 5vw; 
+    --title-weight: 600; /* selct from 100 to 900 (thin to extra bold)*/
+    --subtitle-size: 1.5vw;
+    --subtitle-weight: 400; /* selct from 100 to 900 (thin to extra bold)*/
+    --button-text-size: 1.5vw;
+    --button-text-weight: 400;
+}
+
+html, body{
+    font-family: "Kanit", sans-serif;
+    /* font-weight: 400;
+    font-style: normal; */
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--background-color); */
+    color: var(--text-color);
+    overflow: hidden !important;
+    background-color: var(--background-color);
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    overflow: hidden !important;
+}
+.blurred-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    backdrop-filter: blur(var(--blur));
+}
+
+.test-shape{
+    width: 300px;
+    height: 300px;
+    background-color: var(--blob-1-color);
+}
+
+
+.card{
+    /* background-color: rgb(0, 0, 0); */
+    border-radius: var(--border-radius-1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    padding: 100px;
+    width: 80%;
+    /* max-width: 400px; */
+    /* margin-left: 50px; */
+}
+
+.card-title{
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
+    color: var(--text-color);
+}
+
+
+.card-subtitle{
+    margin-top: 10px;
+    font-size: var(--subtitle-size);
+    font-weight: var(--subtitle-weight);
+    color: var(--secondary-color);
+}
+
+.card-button{
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius-2);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    transition: 0.5s all;
+    /* width: 200px; */
+    /* max-width: 30%; */
+    text-align: center;
+    font-size: var(--button-text-size);
+    font-weight: var(--button-text-weight);
+    text-decoration: none;
+}
+
+.card-button:hover{
+    transform: scale(0.97);
+
+}
+
+
+.menu-shape-1{
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 600px;
+    height: 1000px;
+    border-radius: 50%;
+    background-color: var(--gradient-color-4);
+    z-index: 800;
+    animation: rotate 10s linear infinite;
+    opacity: 0.9;
+
+}
+
+.menu-shape-2{
+    position: absolute;
+    bottom: -100px;
+    right: 150px;
+    width: 600px;
+    height: 1000px;
+    border-radius: 50%;
+    background-color: var(--gradient-color-3);
+    z-index: 800;
+    animation: rotate 10s linear infinite;
+    opacity: 0.9;
+}
+
+.menu-shape-3{
+    position: absolute;
+    bottom: -100px;
+    right: 200px;
+    width: 700px;
+    height: 1100px;
+    border-radius: 50%;
+    background-color: var(--gradient-color-2);
+    z-index: 800;
+    animation: rotate 10s linear infinite;
+    opacity: 0.9;
+}
+
+/* Definisci l'animazione di rotazione */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scaleX(1);
+
+    }
+    50%{
+        transform: rotate(180deg) scaleX(2);
+    }
+    100% {
+        transform: rotate(360deg) scaleX(1);
+    }
+}
+
+.navbar-logo{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: var(--title-size);
+    margin: 10px;
+}
+
+
+.logo{
+    height: 70px;
+    width: auto;
+}
+
+.navbar-links{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 30px;
+}
+
+.social-link{
+    font-size: 3vw;
+    text-decoration: none;
+    color: var(--text-color)
+}

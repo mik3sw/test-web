@@ -1,0 +1,82 @@
+@media (max-width: 1000px) {
+
+    :root{
+
+
+    
+        /* Border radius for the card */
+        --border-radius-1: 15px;
+    
+        /* Border radius for the buttons */
+        --border-radius-2: 30px;
+    
+        /* Text sizes */
+        --title-size: 10vw; 
+        --title-weight: 600; /* selct from 100 to 900 (thin to extra bold)*/
+        --subtitle-size: 3vw;
+        --subtitle-weight: 400; /* selct from 100 to 900 (thin to extra bold)*/
+        --button-text-size: 3vw;
+        --button-text-weight: 400;
+    }
+
+    .card {
+        padding: 20px; 
+        width: 100%; /* Adatta la larghezza */
+    }
+
+    .card-title {
+        font-size: 7vw; /* Adatta il font-size in base alla larghezza dello schermo */
+    }
+
+    .card-subtitle {
+        font-size: 4vw;
+    }
+
+
+
+    .social-link {
+        font-size: 6vw; /* Rendi i social link più piccoli */
+    }
+
+    .menu-shape-1{
+        position: absolute;
+        bottom: 0px;
+        right: -25px;
+        width: 600px;
+        height: 1000px;
+        border-radius: 50%;
+        background-color: var(--gradient-color-4);
+        z-index: 800;
+        animation: rotate 10s linear infinite;
+        opacity: 0.9;
+    
+    }
+    
+    .menu-shape-2{
+        position: absolute;
+        bottom: 0px;
+        right: 50px;
+        width: 700px;
+        height: 1000px;
+        border-radius: 50%;
+        background-color: var(--gradient-color-3);
+        z-index: 800;
+        animation: rotate 10s linear infinite;
+        opacity: 0.9;
+    }
+    
+    .menu-shape-3{
+        position: absolute;
+        bottom: -0px;
+        right: 75px;
+        width: 800px;
+        height: 1000px;
+        border-radius: 50%;
+        background-color: var(--gradient-color-2);
+        z-index: 800;
+        animation: rotate 10s linear infinite;
+        opacity: 0.9;
+    }
+
+    
+}
